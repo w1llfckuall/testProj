@@ -1,0 +1,799 @@
+@font-face {
+  font-family: "GothamB";
+  src: url("../fonts/bold.woff");
+}
+
+@font-face {
+  font-family: "GothamM";
+  src: url("../fonts/medium.woff");
+}
+
+@font-face {
+  font-family: "GothamR";
+  src: url("../fonts/regular.woff");
+}
+
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* a:hover {
+  text-decoration: none;
+}
+
+.main_header {
+  width: 100%;
+  height: 100%;
+  background-color: #b1b1b1;
+}
+
+.main_header .soc-links li,
+.main_header .soc-links a {
+  transition: 0.3s all ease;
+  text-decoration: none;
+}
+
+.townSlide {
+  color: white;
+  transition: 0.3s all ease;
+  position: relative;
+  display: Flex;
+  justify-content: center;
+}
+
+.townSlide::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 80%;
+  height: 2px;
+  background-color: white;
+}
+
+.firstBlockMenu {
+  width: 100%;
+}
+
+.firstBlockMenu .end {
+  height: 0.5em;
+}
+
+.firstBlockMenu .lastPeace .phone .icon {
+  margin-left: -2px;
+}
+
+.firstBlockMenu .lastPeace .phone .description {
+  margin-left: 6px;
+}
+
+.firstBlockMenu .lastPeace .phone .description h5 {
+  color: #f7087a;
+  font-family: "GothamB";
+  font-size: 22px;
+}
+
+.firstBlockMenu .lastPeace .corzina a {
+  position: relative;
+}
+
+.firstBlockMenu .lastPeace .corzina a .countOfBuys {
+  width: 100%;
+  top: 0;
+  left: 80%;
+  border-radius: 20px;
+  display: Flex;
+  justify-content: center;
+  align-items: center;
+  height: 1em;
+  background-color: #f7087a;
+  position: absolute;
+}
+
+.firstBlockMenu .lastPeace .corzina a .countOfBuys span {
+  font-family: "GothamR";
+  color: white;
+}
+
+#containerFirst.is-active {
+  z-index: 999;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: 0.3s all ease;
+}
+
+#containerFirst.is-active .end {
+  width: 0;
+  height: 0;
+}
+
+.soc-links li,
+.soc-links a {
+  color: white;
+}
+
+.navigationFirst li,
+.navigationFirst a {
+  font-family: "GothamB";
+  font-size: 18px;
+  color: black;
+  position: relative;
+  transition: 0.3s all ease;
+  text-transform: uppercase;
+  padding: 0 8px;
+}
+
+.navigationFirst li a::before,
+.navigationFirst a a::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  pointer-events: none;
+  height: 4px;
+  background-color: #f7087a;
+  left: 0;
+  transition: 0.3s all ease;
+  opacity: 1;
+  transform-origin: 50% 100%;
+  top: 200%;
+}
+
+.navigationFirst li a:hover::before,
+.navigationFirst a a:hover::before {
+  opacity: 1;
+  pointer-events: all;
+  width: 100%;
+}
+
+.centerButton button {
+  width: 10em;
+  height: 3em;
+  color: white;
+  background-color: #f7087a;
+  border: none;
+  border-radius: 5px;
+  font-family: "GothamB";
+  transition: 0.3s all ease;
+  text-transform: uppercase;
+}
+
+.centerButton button:hover {
+  color: black;
+}
+
+.firstBlockInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.firstBlockInner .firstBlockContainer {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/firstBlock.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions {
+  position: relative;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .container {
+  position: relative;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .container h2,
+.firstBlockInner .firstBlockContainer .firstBlockOptions .container h5 {
+  font-family: "GothamB";
+  color: #9cd9e4;
+  text-transform: uppercase;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice {
+  width: 50%;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption {
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption button {
+  width: 30%;
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px;
+  color: gray;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption * .title {
+  font-family: "GothamR";
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption .first {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all ease;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption .first .figure {
+  display: Flex;
+  align-items: center;
+  margin-top: 10%;
+  width: 2em;
+  height: 1em;
+  background-color: gray;
+  opacity: 0.6;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption .first .picked1 {
+  transition: 0.3s all ease;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #f7087a;
+  position: absolute;
+  width: 1.5em;
+  border-radius: 5px;
+  top: -20%;
+  left: 80%;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption .second {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption .second .figure {
+  display: Flex;
+  align-items: center;
+  margin-top: 10%;
+  width: 1.2em;
+  height: 1em;
+  background-color: gray;
+  opacity: 0.6;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption .second .picked2 {
+  transition: 0.3s all ease;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #f7087a;
+  position: absolute;
+  width: 1.5em;
+  border-radius: 5px;
+  top: -20%;
+  left: 80%;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption .third {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption .third .figure {
+  display: Flex;
+  align-items: center;
+  margin-top: 10%;
+  width: 2.5em;
+  height: 1em;
+  background-color: gray;
+  opacity: 0.6;
+}
+
+.firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice .buttonsOption .third .picked3 {
+  transition: 0.3s all ease;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #f7087a;
+  position: absolute;
+  width: 1.5em;
+  border-radius: 5px;
+  top: -20%;
+  left: 80%;
+}
+
+.first.is-active {
+  box-shadow: 0px 3px 15px 4px #99aaad;
+}
+
+.picked1.is-active {
+  pointer-events: all;
+  box-shadow: 0px 3px 15px 4px #99aaad;
+}
+
+.second.is-active {
+  box-shadow: 0px 3px 15px 4px #99aaad;
+}
+
+.picked2.is-active {
+  pointer-events: all;
+  box-shadow: 0px 3px 15px 4px #99aaad;
+}
+
+.third.is-active {
+  box-shadow: 0px 3px 15px 4px #99aaad;
+}
+
+.picked3.is-active {
+  pointer-events: all;
+  box-shadow: 0px 3px 15px 4px #99aaad;
+}
+
+.sizeOption button {
+  width: 100%;
+  margin-top: 20px;
+  height: 2.5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #434b52;
+  border: none;
+  border-radius: 10px;
+  font-family: "GothamB";
+}
+
+.sizeOption button span {
+  font-family: "GothamR";
+}
+
+.sizeOption button::after {
+  color: #f7087a;
+}
+
+.imageOption {
+  margin-top: 20px;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.imageOption .inner {
+  width: 100%;
+  align-items: center;
+}
+
+.imageOption .inner .icon {
+  display: flex;
+  justify-content: center;
+}
+
+.imageOption .inner .description .title h5 {
+  color: black;
+  font-family: "GothamB";
+  font-size: 16px;
+}
+
+.imageOption .inner .threeDots span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.imageOption .inner .threeDots span::after,
+.imageOption .inner .threeDots span::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.imageOption .inner .threeDots span::after {
+  top: -10px;
+}
+
+.imageOption .inner .threeDots span::before {
+  top: 10px;
+}
+
+.buyOption {
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+.buyOption .buyFirst {
+  width: 55%;
+  height: 2.5em;
+  align-items: center;
+  background: none;
+  border: solid 2px white;
+  border-radius: 10px;
+}
+
+.buyOption .buyFirst span {
+  color: white;
+  font-family: "GothamR";
+  width: 80%;
+  justify-content: center;
+  display: flex;
+  transition: 0.3s all ease;
+}
+
+.buyOption .buyFirst .corzina {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.buyOption .buyFirst .corzina .line {
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 160%;
+  background-color: white;
+  transition: 0.5s all ease;
+}
+
+.buyOption .buyFirst:hover span {
+  color: black;
+}
+
+.buyOption .buyFirst:hover .line {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.buyOption .buySecond {
+  width: 40%;
+  background: #f7087a;
+  color: white;
+  font-family: "GothamR";
+  text-transform: uppercase;
+  border: none;
+  transition: 0.3s all ease;
+}
+
+.buyOption .buySecond:hover {
+  color: black;
+}
+
+.resultOption {
+  position: absolute;
+  top: 22%;
+  left: 55%;
+}
+
+.resultOption .innerS {
+  transition: 0.3s all ease;
+  width: 450px;
+  height: 15em;
+  background-color: white;
+}
+
+.end {
+  height: 20em;
+  width: 100%;
+}
+
+.secondBlock {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.secondBlock .secondBlockInner {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/secondBlock.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.secondBlockCards {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.secondBlockCards .inner {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.secondBlockCards .inner .firstCard {
+  justify-content: space-around;
+  background-color: white;
+  border-right: solid 2px #ecebea;
+  border-top: 2px solid #ecebea;
+  align-items: center;
+  height: 20em;
+  width: 100%;
+}
+
+.secondBlockCards .inner .firstCard .description {
+  display: Flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.secondBlockCards .inner .firstCard .description .title {
+  font-family: "GothamR";
+  line-height: 40px;
+  color: #003351;
+}
+
+.secondBlockCards .inner .firstCard .description .about {
+  color: #909cab;
+  font-family: "GothamR";
+  width: 100%;
+  justify-content: center;
+  display: Flex;
+}
+
+.secondBlockCards .inner .secondCard {
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  border-right: solid 2px #ecebea;
+  border-top: 2px solid #ecebea;
+  height: 20em;
+  width: 100%;
+}
+
+.secondBlockCards .inner .secondCard .description {
+  display: Flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.secondBlockCards .inner .secondCard .description .title {
+  font-family: "GothamR";
+  line-height: 40px;
+  color: #003351;
+}
+
+.secondBlockCards .inner .secondCard .description .about {
+  color: #909cab;
+  font-family: "GothamR";
+  width: 100%;
+  justify-content: center;
+  display: Flex;
+}
+
+.secondBlockCards .inner .thirdCard {
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  border-right: solid 2px #ecebea;
+  border-top: 2px solid #ecebea;
+  height: 20em;
+  width: 100%;
+}
+
+.secondBlockCards .inner .thirdCard .description {
+  display: Flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.secondBlockCards .inner .thirdCard .description .title {
+  font-family: "GothamR";
+  line-height: 40px;
+  color: #003351;
+}
+
+.secondBlockCards .inner .thirdCard .description .about {
+  color: #909cab;
+  font-family: "GothamR";
+  width: 100%;
+  justify-content: center;
+  display: Flex;
+}
+
+.secondBlockCards .inner .fourthCard {
+  background-color: white;
+  justify-content: space-around;
+  border-right: solid 2px #ecebea;
+  border-top: 2px solid #ecebea;
+  height: 20em;
+  align-items: center;
+}
+
+.secondBlockCards .inner .fourthCard .description {
+  display: Flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.secondBlockCards .inner .fourthCard .description .title {
+  font-family: "GothamR";
+  line-height: 40px;
+  color: #003351;
+}
+
+.secondBlockCards .inner .fourthCard .description .about {
+  color: #909cab;
+  font-family: "GothamR";
+  width: 100%;
+  justify-content: center;
+  display: Flex;
+}
+
+.thirdBlock {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.thirdBlock .for_slick_slider {
+  display: Flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thirdBlock .for_slick_slider button {
+  background-color: gray;
+  width: 120px;
+  height: 25px;
+  outline: none;
+  position: relative;
+  border: none;
+  border-radius: 50%;
+  text-indent: -9000px;
+}
+
+.thirdBlock .for_slick_slider .items {
+  position: relative;
+  display: Flex;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.thirdBlock .for_slick_slider .items .checked {
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  opacity: 0;
+  background-color: #70a2af;
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  justify-content: center;
+  align-items: center;
+}
+
+.thirdBlock .for_slick_slider .items .checked img {
+  width: 50px;
+  height: 50px;
+}
+
+.thirdBlock .for_slick_slider .items:hover .checked {
+  opacity: 0.8;
+}
+
+.thirdBlock .for_slick_slider .items img {
+  width: 250px;
+  height: 200px;
+  margin: 0px;
+}
+
+@media (max-width: 1250px) {
+  .secondBlock {
+    height: 100%;
+  }
+
+  .secondBlockCards .inner {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 1185px) {
+  .firstBlockInner .firstBlockContainer .container {
+    text-align: center;
+  }
+
+  .firstBlockInner .firstBlockContainer .firstBlockOptions .formChoice {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .firstBlockMenu nav {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .firstBlockMenu nav .end {
+    height: 0.5em;
+  }
+
+  .firstBlockMenu nav .centerButton {
+    margin-left: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .firstBlockMenu nav .lastPeace {
+    width: 100px;
+    display: none;
+    width: 0;
+  }
+
+  .firstBlockMenu nav .lastPeace .phone {
+    display: none;
+  }
+
+  .firstBlockMenu nav .lastPeace .phone .icon img {
+    display: none;
+  }
+
+  .firstBlockMenu nav .lastPeace .phone .description {
+    display: none;
+    margin-left: 6px;
+  }
+
+  .firstBlockMenu nav .lastPeace .phone .description h5 {
+    color: #f7087a;
+    font-family: "GothamB";
+    font-size: 22px;
+  }
+
+  .firstBlockMenu nav .lastPeace .corzina {
+    display: none;
+  }
+
+  .firstBlockMenu nav .lastPeace .corzina img {
+    display: none;
+  }
+
+  .firstBlockMenu nav .lastPeace .corzina .countOfBuys {
+    display: none;
+  }
+
+  .firstBlockMenu .soc-links {
+    display: none;
+  }
+
+  .firstBlockMenu .navigationFirst {
+    display: none;
+  }
+
+  .resultOption {
+    top: 0;
+    left: 0;
+    position: relative;
+    display: Flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .email {
+    display: none;
+  }
+}
